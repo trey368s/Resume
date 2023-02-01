@@ -18,3 +18,9 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+    - name: Build and push to Docker Hub
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        push: true
+        tags: trey368s/resume:latest, trey368s/resume:${{ github.run_number }}
