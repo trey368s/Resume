@@ -21,6 +21,6 @@ jobs:
     - name: Build and push to Docker Hub
       uses: docker/build-push-action@v2
       with:
-        context: ./dockerfile
+        context: .
         push: true
         tags: trey368s/resume:latest, trey368s/resume:${{ github.run_number }}
