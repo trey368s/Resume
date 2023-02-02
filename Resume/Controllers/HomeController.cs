@@ -18,7 +18,7 @@ namespace Resume.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Programming()
         {
             return View();
         }
