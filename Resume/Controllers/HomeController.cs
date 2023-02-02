@@ -23,6 +23,16 @@ namespace Resume.Controllers
             return View();
         }
 
+        public IActionResult SystemAdmin()
+        {
+            return View();
+        }
+
+        public IActionResult Networking()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
