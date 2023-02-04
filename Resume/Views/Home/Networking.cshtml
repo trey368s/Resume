@@ -12,5 +12,8 @@
 <br>
 <h1>Networking Architecture</h1>
 <div class="text-center">
-  <img src="/images/12.jpg" class="rounded">
+    @foreach(var file in ViewBag.images)
+    {
+        <img src = "~/Images/@Path.GetFileName(file)">
+    }
 </div>
