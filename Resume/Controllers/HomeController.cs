@@ -30,9 +30,6 @@ namespace Resume.Controllers
 
         public IActionResult Networking()
         {
-            String path = Server.MapPath("~/Images/")
-            String[] imagesFiles = Directory.GetFiles(path)
-            ViewBag.images = imagesFiles;
             return View();
         }
 
