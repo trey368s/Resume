@@ -30,12 +30,17 @@
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="SystemAdmin">Systems Administration</a>
                         </li>
                     </ul>
-                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                        <input type="radio" class="btn-check" name="btnradio" id="quartz" autocomplete="off" checked="">
-                        <label class="btn btn-outline-primary" for="btnradio1">Quartz</label>
-                        <input type="radio" class="btn-check" name="btnradio" id="vapor" autocomplete="off" checked="">
-                        <label class="btn btn-outline-primary" for="btnradio2">Vapor</label>
-                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check" name="btnradio" id="quartz" autocomplete="off" checked="">
+                                <label class="btn btn-outline-primary" for="quartz">Quartz</label>
+                                <input type="radio" class="btn-check" name="btnradio" id="vapor" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="vapor">Vapor</label>
+                                <a class="btn btn-secondary my-2 my-sm-0" href="">Startpage</a>
+                            </div>
+                        </li>
+                    </ul>
                     <script>
                         const changeCssQuartz = document.getElementById('quartz');
                         const changeCssVapor = document.getElementById('vapor');
@@ -51,13 +56,6 @@
                         linkTag.setAttribute('href', newCssPathVapor);
                         });
                     </script>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <div class="btn-nav">
-                                <a class="btn btn-secondary my-2 my-sm-0" href="https://stegeman.dev">Startpage</a>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </nav>
