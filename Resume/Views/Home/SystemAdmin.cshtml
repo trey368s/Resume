@@ -39,8 +39,9 @@
                 <h5 class="card-title">Linux</h5>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item list-group-item-action list-group-item-warning">Linux Terminal</li>
-                    <li class="list-group-item list-group-item-action list-group-item-warning">PuTTY</li>
-                    <li class="list-group-item list-group-item-action list-group-item-warning">WinSCP</li>
+                    <li class="list-group-item list-group-item-action list-group-item-warning">SSH</li>
+                    <li class="list-group-item list-group-item-action list-group-item-warning">SFTP</li>
+                    <li class="list-group-item list-group-item-action list-group-item-warning">Bash</li>
                     <li class="list-group-item list-group-item-action list-group-item-warning">Docker</li>
                 </ul>
             </div>
@@ -61,4 +62,24 @@
     </div>
 </div>
 <h1>System Architecture</h1>
-<img src="https://user-images.githubusercontent.com/84042739/233774943-fd796d38-ab0c-4725-85f1-83504a1b292e.jpg" class="card-img-top h-100" alt="server">
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <img class="card-img-top" src="https://user-images.githubusercontent.com/84042739/233774943-fd796d38-ab0c-4725-85f1-83504a1b292e.jpg" alt="supermicro">
+            <div class="card-body">
+                <h5 class="card-title">Supermicro Server & Cisco Switch</h5>
+                <p class="card-text">The silver box on the bottom is a Supermicro 1U 1022G-NTF A+ Server which has 32 cores and 70GB of RAM. It gets its connection through network cables from the box above it which is a Cisco Switch.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <img class="card-img-top" src="https://user-images.githubusercontent.com/84042739/233776326-4e5c18db-e8be-40e6-92be-27d56d60e3c9.jpg" alt="backup server">
+            <div class="card-body">
+                <h5 class="card-title">Backup Server & Programming Laptop</h5>
+                <p class="card-text">The desktop on the right is a backup server which runs daily copying the virtual disks of the Supermicro server to another system, this can provide high availability. The laptop on the right I use for programming and SSH.</p>
+            </div>
+        </div>
+    </div>
+</div>
