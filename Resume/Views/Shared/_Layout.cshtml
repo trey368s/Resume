@@ -37,8 +37,9 @@
                                 <label class="btn btn-secondary" for="quartz">Light</label>
                                 <input type="radio" class="btn-check" name="btnradio" id="vapor" autocomplete="off">
                                 <label class="btn btn-secondary" for="vapor">Dark</label>
-                                <input type="button" class="btn-check" name="btnstart" id="start" asp-action="Startpage">
-                                <label class="btn btn-info" for="start">Startpage</label>
+                                <form asp-controller="Home" asp-action="Startpage">
+                                    <button type="submit" class="btn btn-info">Startpage</button>
+                                </form>
                             </div>
                         </li>
                     </ul>
