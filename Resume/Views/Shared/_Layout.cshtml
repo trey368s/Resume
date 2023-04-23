@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Resume.styles.css" asp-append-version="true" /> 
-    <link rel="stylesheet" href="~/css/vapor.css" />
+    <link rel="stylesheet" href="~/css/quartz.css" />
 </head>
 <body>
     <header>
@@ -37,30 +37,28 @@
                                 <label class="btn btn-outline-primary" for="quartz">Quartz</label>
                                 <input type="radio" class="btn-check" name="btnradio" id="vapor" autocomplete="off">
                                 <label class="btn btn-outline-primary" for="vapor">Vapor</label>
-                                <a class="btn btn-secondary my-2 my-sm-0" href="https://stegeman.dev">Startpage</a>
+                                <a class="btn btn-secondary my-2 my-sm-0" href="">Startpage</a>
                             </div>
                         </li>
                     </ul>
                     <script>
-                        const changeCssQuartz = document.getElementById('quartz');
-                        const changeCssVapor = document.getElementById('vapor');
-                        const linkTag = document.querySelector('link[rel="stylesheet"]');
-  
-                        changeCssQuartz.addEventListener('click', () => {
-                        const newCssPathQuartz = '~/css/quartz.css';
-                        linkTag.setAttribute('href', newCssPathQuartz);
-                        });
-
-                        changeCssVapor.addEventListener('click', () => {
-                        const newCssPathVapor = '~/css/vapor.css';
-                        linkTag.setAttribute('href', newCssPathVapor);
-                        });
-
-                        document.addEventListener("DOMContentLoaded", function() {
-                        const checkedRadioButton = document.querySelector('input[name="btnradio"]:checked');
-                        const newCssPath = checkedRadioButton.id === 'quartz' ? '~/css/quartz.css' : '~/css/vapor.css';
-                        linkTag.setAttribute('href', newCssPath);
-                        });
+                      const quartzCSS = '/css/quartz.css';
+                      const vaporCSS = '/css/vapor.css';
+                      const currentCSS = document.querySelector('link[href*="vapor.css"]');
+                      
+                      function changeCSS(cssFile) {
+                        currentCSS.href = cssFile;
+                      }
+                      
+                      const quartzRadio = document.getElementById('quartz');
+                      quartzRadio.addEventListener('change', function() {
+                        changeCSS(quartzCSS);
+                      });
+                      
+                      const vaporRadio = document.getElementById('vapor');
+                      vaporRadio.addEventListener('change', function() {
+                        changeCSS(vaporCSS);
+                      });
                     </script>
                 </div>
             </div>
