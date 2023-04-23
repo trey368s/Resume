@@ -37,9 +37,8 @@
                                 <label class="btn btn-secondary" for="quartz">Light</label>
                                 <input type="radio" class="btn-check" name="btnradio" id="vapor" value="vapor" autocomplete="off">
                                 <label class="btn btn-secondary" for="vapor">Dark</label>
-                                <form asp-controller="Home" asp-action="Startpage">
-                                    <button type="submit" class="btn btn-info">Startpage</button>
-                                </form>
+                                <input type="button" class="btn-check" name="btn" id="start" value="start" autocomplete="off">
+                                <label class="btn btn-info" for="start" onclick="redirectToStartPage()">Startpage</label>
                             </div>
                         </li>
                     </ul>
@@ -47,6 +46,10 @@
                         const quartzCSS = '/css/quartz.css';
                         const vaporCSS = '/css/vapor.css';
                         const currentCSS = document.querySelector('link[href*="quartz.css"]');
+                        
+                        function redirectToStartPage() {
+                            window.location.href = "/Home/Startpage";
+                        }
 
                         function changeCSS(cssFile) {
                             currentCSS.href = cssFile;
