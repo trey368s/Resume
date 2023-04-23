@@ -42,23 +42,23 @@
                         </li>
                     </ul>
                     <script>
-                      const quartzCSS = '~/css/quartz.css';
-                      const vaporCSS = '~/css/vapor.css';
-                      const currentCSS = document.querySelector('link[href*="quartz.css"]');
-                      
-                      function changeCSS(cssFile) {
+                        const quartzCSS = '/css/quartz.css';
+                        const vaporCSS = '/css/vapor.css';
+                        const currentCSS = document.querySelector('link[href*="quartz.css"]');
+
+                        function changeCSS(cssFile) {
                         currentCSS.href = cssFile;
-                      }
-                      
-                      const quartzRadio = document.getElementById('quartz');
-                      quartzRadio.addEventListener('change', function() {
+                        }
+
+                        const quartzRadio = document.getElementById('quartz');
+                        quartzRadio.addEventListener('change', function() {
                         changeCSS(quartzCSS);
-                      });
-                      
-                      const vaporRadio = document.getElementById('vapor');
-                      vaporRadio.addEventListener('change', function() {
+                        });
+
+                        const vaporRadio = document.getElementById('vapor');
+                        vaporRadio.addEventListener('change', function() {
                         changeCSS(vaporCSS);
-                      });
+                        });
                     </script>
                 </div>
             </div>
