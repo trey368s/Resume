@@ -37,7 +37,7 @@
                                 <label class="btn btn-outline-primary" for="quartz">Quartz</label>
                                 <input type="radio" class="btn-check" name="btnradio" id="vapor" autocomplete="off">
                                 <label class="btn btn-outline-primary" for="vapor">Vapor</label>
-                                <a class="btn btn-secondary my-2 my-sm-0" href="">Startpage</a>
+                                <a class="btn btn-secondary my-2 my-sm-0" href="https://stegeman.dev">Startpage</a>
                             </div>
                         </li>
                     </ul>
@@ -54,6 +54,12 @@
                         changeCssVapor.addEventListener('click', () => {
                         const newCssPathVapor = '~/css/vapor.css';
                         linkTag.setAttribute('href', newCssPathVapor);
+                        });
+
+                        document.addEventListener("DOMContentLoaded", function() {
+                        const checkedRadioButton = document.querySelector('input[name="btnradio"]:checked');
+                        const newCssPath = checkedRadioButton.id === 'quartz' ? '~/css/quartz.css' : '~/css/vapor.css';
+                        linkTag.setAttribute('href', newCssPath);
                         });
                     </script>
                 </div>
