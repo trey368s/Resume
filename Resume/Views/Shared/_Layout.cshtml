@@ -34,9 +34,9 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                <input type="radio" class="btn-check" name="btnradio" id="quartz" autocomplete="off" value="quartz" checked>
+                                <input type="radio" class="btn-check" name="btnradio" id="quartz" autocomplete="off" value="quartz">
                                 <label class="btn btn-secondary" for="quartz">Light</label>
-                                <input type="radio" class="btn-check" name="btnradio" id="vapor" value="vapor" autocomplete="off">
+                                <input type="radio" class="btn-check" name="btnradio" id="vapor" value="vapor" autocomplete="off" checked>
                                 <label class="btn btn-secondary" for="vapor">Dark</label>
                                 <input type="button" class="btn-check" name="btn" id="start" value="start" autocomplete="off">
                                 <label class="btn btn-info" for="start" onclick="redirectToStartPage()">Startpage</label>
@@ -73,12 +73,12 @@
                         });
                         
                         const lastSelected = localStorage.getItem('radioButton');
-                        if (lastSelected === 'vapor') {
-                            vaporRadio.checked = true;
-                            changeCSS(vaporCSS);
-                        } else {
+                        if (lastSelected === 'quartz') {
                             quartzRadio.checked = true;
                             changeCSS(quartzCSS);
+                        } else {
+                            vaporRadio.checked = true;
+                            changeCSS(vaporCSS);
                         }
                     </script>
                 </div>
