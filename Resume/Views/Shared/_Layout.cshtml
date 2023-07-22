@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Resume.styles.css" asp-append-version="true" /> 
-    <link rel="stylesheet" href="~/css/quartz.css" />
+    <link rel="stylesheet" href="~/css/vapor.css" />
     <link rel="icon" href="~/favicon.ico" type="image/x-icon" />
 </head>
 <body>
@@ -34,9 +34,9 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                <input type="radio" class="btn-check" name="btnradio" id="quartz" autocomplete="off" value="quartz">
+                                <input type="radio" class="btn-check" name="btnradio" id="quartz" autocomplete="off" value="quartz" checked>
                                 <label class="btn btn-secondary" for="quartz">Light</label>
-                                <input type="radio" class="btn-check" name="btnradio" id="vapor" value="vapor" autocomplete="off" checked="">
+                                <input type="radio" class="btn-check" name="btnradio" id="vapor" value="vapor" autocomplete="off">
                                 <label class="btn btn-secondary" for="vapor">Dark</label>
                                 <input type="button" class="btn-check" name="btn" id="start" value="start" autocomplete="off">
                                 <label class="btn btn-info" for="start" onclick="redirectToStartPage()">Startpage</label>
@@ -46,7 +46,7 @@
                     <script>
                         const quartzCSS = '/css/quartz.css';
                         const vaporCSS = '/css/vapor.css';
-                        const currentCSS = document.querySelector('link[href*="quartz.css"]');
+                        const currentCSS = document.querySelector('link[href*="vapor.css"]');
                         
                         function redirectToStartPage() {
                             window.location.href = "/Home/Startpage";
