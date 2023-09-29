@@ -4,11 +4,11 @@ using System.Diagnostics;
 
 namespace Resume.Controllers
 {
-    public class HomeController : Controller
+    public class ResumeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<ResumeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public ResumeController(ILogger<ResumeController> logger)
         {
             _logger = logger;
         }
@@ -23,7 +23,7 @@ namespace Resume.Controllers
             return View();
         }
 
-        public IActionResult SystemAdmin()
+        public IActionResult SystemAdministration()
         {
             return View();
         }
