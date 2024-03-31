@@ -18,7 +18,7 @@ namespace Resume.Controllers
             return View();
         }
 
-        public IActionResult Programming()
+        public IActionResult SoftwareDevelopment()
         {
             return View();
         }
@@ -28,7 +28,7 @@ namespace Resume.Controllers
             return View();
         }
 
-        public IActionResult Networking()
+        public IActionResult ComputerNetworking()
         {
             return View();
         }
